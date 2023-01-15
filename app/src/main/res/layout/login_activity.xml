@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation= "vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="600dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:background="@drawable/logoaplikasi"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/login_background">
+
+        <TextView
+            android:fontFamily="@font/fpoppinsemib"
+            android:textSize="25dp"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:text="Sign in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:drawableStart="@drawable/user"
+            android:paddingLeft="10dp"
+            android:hint="Username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="5dp"
+            android:background="@drawable/form_background"/>
+
+        <EditText
+            android:drawableStart="@drawable/key"
+            android:paddingLeft="10dp"
+            android:hint="Password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="5dp"
+            android:background="@drawable/form_background"/>
+
+        <Button
+            android:layout_marginTop="24dp"
+            android:text="LOGIN"
+            android:layout_width="match_parent"
+            android:layout_marginRight="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/loginbutton_background"
+            app:backgroundTint="#38E54D"/>
+
+        <TextView
+            android:textColor="@color/white"
+            android:fontFamily="@font/fpoppinsb"
+            android:textAlignment="center"
+            android:text="Sign in with"
+            android:layout_marginTop="50dp"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:background="@drawable/google"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/fpoppinsb"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:layout_marginTop="15dp"
+                android:text="Or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:background="@drawable/facebook"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

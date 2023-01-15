@@ -199,11 +199,10 @@
                     <ImageView
                         android:id="@+id/imageView2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/homelogo" />
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/home2"/>
 
                     <TextView
-                        android:id="@+id/textViewHomebtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Home"
@@ -220,17 +219,15 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/btnnews"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/newslogo" />
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/article2" />
 
                     <TextView
-                        android:id="@+id/textViewHomebtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Profile"
+                        android:text="Article"
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12dp" />
@@ -244,13 +241,11 @@
                     android:visibility="invisible">
 
                     <ImageView
-                        android:id="@+id/btnnews"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/btn1" />
 
                     <TextView
-                        android:id="@+id/textViewHomebtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Home"
@@ -267,16 +262,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/btnnews"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/reviewslogo" />
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/reviews2" />
 
                     <TextView
-                        android:id="@+id/textViewHomebtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Support"
+                        android:text="Review"
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12dp" />
@@ -293,14 +286,14 @@
                     <ImageView
                         android:id="@+id/btnnews"
                         android:layout_width="match_parent"
-                        android:layout_height="27dp"
-                        app:srcCompat="@drawable/profilelogo" />
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/profile2" />
 
                     <TextView
                         android:id="@+id/textViewHomebtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Settings"
+                        android:text="Profile"
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12dp" />

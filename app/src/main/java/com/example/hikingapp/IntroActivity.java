@@ -4,24 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
 public class IntroActivity extends AppCompatActivity {
 
-    private Button btnGetstart;
+    Handler h = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-        btnGetstart = findViewById(R.id.buttonGetstart);
-        btnGetstart.setOnClickListener(new View.OnClickListener() {
+        h.postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(IntroActivity.this,MainActivity.class);
-                startActivity(intent);
+            public void run() {
+                Intent i = new Intent(IntroActivity.this, MainActivity.class);
+                startActivity(i);
             }
-        });
+        },1000);
+
     }
 }
