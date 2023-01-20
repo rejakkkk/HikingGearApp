@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "425094338153",
+    "project_id": "mountnesia-dfca7",
+    "storage_bucket": "mountnesia-dfca7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425094338153:android:c4f5d5981c1fdc5bdc74f8",
+        "android_client_info": {
+          "package_name": "com.example.hikingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "425094338153-c485ktddbhnahrrg2n07caupptuo5hus.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hikingapp",
+            "certificate_hash": "0df4e9e33100331ac3753729e67fd01daf6958dd"
+          }
+        },
+        {
+          "client_id": "425094338153-cbtggj7bl3qls0s2sgsnl9ahhgd68m09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCO4HDycmq_jNvGzDMndLmps1xNtrfu1s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "425094338153-cbtggj7bl3qls0s2sgsnl9ahhgd68m09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

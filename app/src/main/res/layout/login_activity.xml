@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation= "vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -11,7 +13,7 @@
         android:layout_weight="1"
         android:padding="15dp"
         android:layout_width="match_parent"
-        android:layout_height="600dp">
+        android:layout_height="500dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -37,42 +39,69 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <EditText
-            android:drawableStart="@drawable/user"
-            android:paddingLeft="10dp"
-            android:hint="Username"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/white">
+        <EditText
+            android:id="@+id/etEmail"
+            android:drawableStart="@drawable/user"
+            android:hint="Email"
+            android:padding="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:drawablePadding="5dp"
             android:background="@drawable/form_background"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/white"
+            app:passwordToggleEnabled="true">
         <EditText
+            android:id="@+id/etPassword"
             android:drawableStart="@drawable/key"
-            android:paddingLeft="10dp"
+            android:padding="17dp"
             android:hint="Password"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
             android:drawablePadding="5dp"
-            android:background="@drawable/form_background"/>
+            android:background="@drawable/form_background" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/btnLogin"
             android:layout_marginTop="24dp"
             android:text="LOGIN"
             android:layout_width="match_parent"
-            android:layout_marginRight="120dp"
-            android:layout_marginLeft="120dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/loginbutton_background"
             app:backgroundTint="#38E54D"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:text="Register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/loginbutton_background"
+            app:backgroundTint="#EB455F"/>
 
         <TextView
             android:textColor="@color/white"
             android:fontFamily="@font/fpoppinsb"
             android:textAlignment="center"
             android:text="Sign in with"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="29dp"
             android:textSize="18dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

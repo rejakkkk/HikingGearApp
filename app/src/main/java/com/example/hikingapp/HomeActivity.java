@@ -4,27 +4,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.hikingapp.Adapter.CategoryAdapter;
 import com.example.hikingapp.Adapter.PopularAdapter;
+import com.example.hikingapp.Bar.ArticleActivity;
+import com.example.hikingapp.Bar.CartListActivity;
+import com.example.hikingapp.Bar.ProfileActivity;
+import com.example.hikingapp.Bar.ReviewActivity;
 import com.example.hikingapp.Model.ModelCategory;
 import com.example.hikingapp.Model.ModelGear;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     private RecyclerView.Adapter adapterCategory, adapterPopular, adapterLastview;
     private RecyclerView recyclerViewCategory, recyclerViewPopular, recyclerViewLv;
+    private FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home_activity);
         setRecyclerViewCategory();
         setRecyclerViewPopular();
         setRecyclerViewLv();
+        menuBarButton();
     }
 
     private void setRecyclerViewCategory(){
@@ -73,5 +85,54 @@ public class MainActivity extends AppCompatActivity {
 
         adapterLastview= new PopularAdapter(gearList);
         recyclerViewLv.setAdapter(adapterPopular);
+    }
+
+    private void menuBarButton(){
+        FloatingActionButton floatingActionButton= findViewById(R.id.cartBtn);
+        LinearLayout homeBtn= findViewById(R.id.homeBtn);
+        LinearLayout articleBtn = findViewById(R.id.articleBtn);
+        LinearLayout reviewBtn = findViewById(R.id.reviewBtn);
+        LinearLayout profileBtn = findViewById(R.id.profileBtn);
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (firebaseUser == null){
+                    startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+                }else {
+                    startActivity(new Intent(HomeActivity.this, CartListActivity.class));
+                }
+            }
+        });
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, HomeActivity.class));
+            }
+        });
+
+        articleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, ArticleActivity.class));
+            }
+        });
+
+        reviewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, ReviewActivity.class));
+            }
+        });
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
+            }
+        });
+
     }
 }
